@@ -1,5 +1,7 @@
-package com.juliocordon_0904_25_15166;
+package com.juliocordon_0904_25_15166.app;
 
+import com.juliocordon_0904_25_15166.servicio.Biblioteca;
+import com.juliocordon_0904_25_15166.modelo.Libro;
 import java.util.Scanner;
 import java.util.List;
 

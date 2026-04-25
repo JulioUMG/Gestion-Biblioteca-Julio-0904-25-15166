@@ -1,12 +1,12 @@
-package com.juliocordon_0904_25_15166;
+package com.juliocordon_0904_25_15166.servicio;
 
-import com.juliocordon_0904_25_15166.Libro;
+import com.juliocordon_0904_25_15166.modelo.Libro;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Biblioteca {
     private List<Libro> libros;
-
+ 
     public Biblioteca() {
         this.libros = new ArrayList<>();
     }
