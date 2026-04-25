@@ -18,7 +18,6 @@ public class Biblioteca {
     }
 
     public List<Libro> obtenerLibros() {
-        // Retornamos una copia para evitar modificaciones externas directas
         return new ArrayList<>(libros);
     }
 

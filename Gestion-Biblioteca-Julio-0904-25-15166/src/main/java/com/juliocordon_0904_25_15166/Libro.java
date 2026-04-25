@@ -7,13 +7,13 @@ public class Libro {
 
     public Libro(String titulo, String autor, int yearPublicacion) {
         if (titulo == null || titulo.trim().isEmpty()) {
-            throw new IllegalArgumentException("El título no puede ser null ni vacío");
+            throw new IllegalArgumentException("El titulo no puede ser null ni vacío");
         }
         if (autor == null || autor.trim().isEmpty()) {
-            throw new IllegalArgumentException("El autor no puede ser null ni vacío");
+            throw new IllegalArgumentException("El autor no puede ser null ni vacio");
         }
         if (yearPublicacion <= 0) {
-            throw new IllegalArgumentException("El año de publicación debe ser mayor que 0");
+            throw new IllegalArgumentException("El anio de publicacion debe ser mayor que 0");
         }
 
         this.titulo = titulo;

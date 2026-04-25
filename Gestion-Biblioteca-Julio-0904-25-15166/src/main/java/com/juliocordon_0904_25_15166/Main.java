@@ -11,12 +11,12 @@ public class Main {
         int opcion = 0;
 
         do {
-            System.out.println("\n--- SISTEMA DE GESTIÓN DE BIBLIOTECA ---");
+            System.out.println("\n--- SISTEMA DE GESTION DE BIBLIOTECA ---");
             System.out.println("1. Agregar un libro");
             System.out.println("2. Ver todos los libros");
-            System.out.println("3. Buscar libro por título");
+            System.out.println("3. Buscar libro por titulo");
             System.out.println("4. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Seleccione una opcion: ");
 
             try {
                 opcion = Integer.parseInt(sc.nextLine());
@@ -35,25 +35,24 @@ public class Main {
                         System.out.println("Saliendo del sistema...");
                         break;
                     default:
-                        System.out.println("Opción no válida.");
+                        System.out.println("Opcion no válida.");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Error: Ingrese un número válido.");
+                System.out.println("Error: Ingrese un numero valido.");
             }
         } while (opcion != 4);
 
         sc.close();
-    } // Aquí cierra el MAIN
+    }
 
-    // --- MÉTODOS AUXILIARES (Deben ser STATIC para llamarlos desde el main) ---
 
     private static void agregarLibroMenu(Biblioteca biblioteca, Scanner sc) {
         try {
-            System.out.print("Ingrese título: ");
+            System.out.print("Ingrese titulo: ");
             String titulo = sc.nextLine();
             System.out.print("Ingrese autor: ");
             String autor = sc.nextLine();
-            System.out.print("Ingrese año: ");
+            System.out.print("Ingrese anio: ");//lo puse asi para que no se vea feo xdd
             int year = Integer.parseInt(sc.nextLine());
 
             Libro nuevo = new Libro(titulo, autor, year);
@@ -76,14 +75,14 @@ public class Main {
     }
 
     private static void buscarLibroMenu(Biblioteca biblioteca, Scanner sc) {
-        System.out.print("Título a buscar: ");
+        System.out.print("Titulo a buscar: ");
         String busqueda = sc.nextLine();
         Libro encontrado = biblioteca.buscarPorTitulo(busqueda);
         
         if (encontrado != null) {
             System.out.println("Encontrado: " + encontrado.getTitulo() + " de " + encontrado.getAutor());
         } else {
-            System.out.println("No se encontró el libro.");
+            System.out.println("No se encontro el libro.");
         }
     }
 }
